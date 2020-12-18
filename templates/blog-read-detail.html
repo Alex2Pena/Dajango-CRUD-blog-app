@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h1>{{ blog.title }}</h1>
+<h2>author: {{ blog.author }}</h2>
+<p>{{ blog.body }}</p>
+<a href="{% url 'blog_update' blog.pk %}">Edit Post</a>
+<a href="{% url 'blog_delete' blog.pk %}">Delete Post</a>
+
+{% endblock content %}

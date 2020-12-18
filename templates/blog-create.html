@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h3>Create Blog Post</h3>
+
+<form action="" method="POST">
+    <!-- Must have csrf_token it is a MAJOR security item -->
+    {% csrf_token %}
+    <!-- List each element as a <p> element -->
+    {{ form.as_p }}
+    <input type="submit" value="SAVE">
+</form>
+
+{% endblock content %}
